@@ -1,0 +1,43 @@
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    padding: 50px 15px;
+    @media screen and (max-width: 700px), (max-height: 500px) {
+      flex-wrap: nowrap;
+      flex-direction: column;
+    }
+}
+
+.form {
+    max-width: 570px;
+    margin: auto;
+    width: 100%;
+    
+  
+    @media screen and (max-width: 576px) {
+      margin: 0 auto;
+    }
+}
+
+::ng-deep app-root .p-card {
+    background-color: #0f2f4e;
+    color: #fff;
+}
+
+::ng-deep app-root .p-card-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+::ng-deep app-root .p-field.p-col {
+    margin-right: 10px;
+    margin-bottom: 25px;
+}
+
+.cardBrand {
+    width: 90px;
+}
+
+label {
+    padding-right: 10px;
+}
