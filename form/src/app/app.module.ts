@@ -8,14 +8,12 @@ import { AppComponent } from './app.component';
 import { CardModule } from 'primeng/card';
 import { FormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
+import { InputNumberModule } from 'primeng/inputnumber';
 import { InputMaskModule } from 'primeng/inputmask';
 import { DropdownModule } from 'primeng/dropdown';
 
-
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -23,10 +21,11 @@ import { DropdownModule } from 'primeng/dropdown';
     CardModule,
     FormsModule,
     InputTextModule,
+    InputNumberModule,
     InputMaskModule,
-    DropdownModule
+    DropdownModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

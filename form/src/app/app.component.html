@@ -1,37 +1,55 @@
 <div class="wrapper">
   <div class="form">
     <p-card>
-        <span class="p-field p-col p-float-label">
-            <input style="width: 250px;" id="firstName" type="text" pInputText>
-            <label for="firstName">First Name</label>
-        </span>
-        <span class="p-field p-col p-float-label">
-            <input style="width: 250px;" id="lastName" type="text" pInputText>
-            <label for="lastName">Last Name</label> 
-        </span>
-        <span class="p-field p-col p-float-label">
-          <input style="width: 350px;" id="cardNum" type="text" pInputText>
-          <label for="cardNum">Card Number</label>
-        </span>
-        <div class="cardBrand">VISA</div>
-        <span class="p-field p-col p-float-label">
-          <input style="width: 70px;" id="securityCode" type="text" pInputText>
-          <label for="securityCode">Code</label>
-        </span>
-        <p-dropdown 
-          [options]="months" 
-          [(ngModel)]="selectedMonth" 
-          placeholder="Month" 
-          optionLabel="month" 
-          [showClear]="true">
-        </p-dropdown>
-        <p-dropdown
-          [options]="years" 
-          [(ngModel)]="selectedYear" 
-          placeholder="Year" 
-          optionLabel="year" 
-          [showClear]="true">
+      <div class="credit-card"></div>
+      <span class="p-field p-col p-float-label">
+        <input style="width: 250px" id="firstName" type="text" pInputText />
+        <label for="firstName">First Name</label>
+      </span>
+      <span class="p-field p-col p-float-label">
+        <input style="width: 250px" id="lastName" type="text" pInputText />
+        <label for="lastName">Last Name</label>
+      </span>
+      <span class="p-field p-col p-float-label">
+        <p-inputNumber
+          [(ngModel)]="numInputs"
+          mode="decimal"
+          inputId="cardNum"
+          [useGrouping]="false"
+        >
+        </p-inputNumber>
+        <label for="cardNum">Card Number</label>
+      </span>
+      <div class="cardBrand">VISA</div>
+      <span class="p-field p-col p-float-label"></span>
+      <label for="cardMonth">Expiration Date</label>
+      <p-dropdown
+        id="cardMonth"
+        [options]="months"
+        [(ngModel)]="selectedMonth"
+        placeholder="Month"
+        optionLabel="month"
+        [showClear]="true"
+      >
       </p-dropdown>
+      <p-dropdown
+        [options]="years"
+        [(ngModel)]="selectedYear"
+        placeholder="Year"
+        optionLabel="year"
+        [showClear]="true"
+      >
+      </p-dropdown>
+      <span class="p-field p-col p-float-label">
+        <p-inputNumber
+          [(ngModel)]="numInputs"
+          mode="decimal"
+          inputId="cvv"
+          [useGrouping]="false"
+        >
+        </p-inputNumber>
+        <label style="margin-left: 40px" for="securityCode">CVV</label>
+      </span>
     </p-card>
   </div>
 </div>
