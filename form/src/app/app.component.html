@@ -1,13 +1,18 @@
 <div class="wrapper">
+  <!-- <img style="width: 5rem" src="../assets/Virtual wallet logo.svg"> -->
   <div class="form">
     <p-card>
-      <div class="credit-card"></div>
+      <div class="credit-card">
+        <img style="width: 2rem; align-self: flex-end; margin-bottom: 20px;" src="../assets/wireless-logo.svg">
+        <img style="width: 4rem; align-self: flex-start;" src="../assets/chip.svg">
+        <img style="width: 6rem; align-self: flex-end; margin-top: auto;" src="../assets/visa.svg">
+      </div>
       <span class="p-field p-col p-float-label">
-        <input style="width: 250px" id="firstName" type="text" pInputText />
+        <input style="width: 245px; margin-right: 28px;" id="firstName" type="text" pInputText />
         <label for="firstName">First Name</label>
       </span>
       <span class="p-field p-col p-float-label">
-        <input style="width: 250px" id="lastName" type="text" pInputText />
+        <input style="width: 245px;" id="lastName" type="text" pInputText />
         <label for="lastName">Last Name</label>
       </span>
       <span class="p-field p-col p-float-label">
@@ -21,7 +26,6 @@
         <label for="cardNum">Card Number</label>
       </span>
       <div class="cardBrand">VISA</div>
-      <span class="p-field p-col p-float-label"></span>
       <label for="cardMonth">Expiration Date</label>
       <p-dropdown
         id="cardMonth"
@@ -48,8 +52,12 @@
           [useGrouping]="false"
         >
         </p-inputNumber>
-        <label style="margin-left: 40px" for="securityCode">CVV</label>
+        <label style="margin-left: 50px" for="securityCode">CVV</label>
       </span>
     </p-card>
+    <span class="p-buttonset">
+      <button pButton type="button" label="Save" icon="pi pi-check"></button>
+      <button pButton type="button" label="Clear" icon="pi pi-times"></button>
+    </span>
   </div>
 </div>

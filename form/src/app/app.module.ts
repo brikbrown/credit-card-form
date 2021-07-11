@@ -11,6 +11,10 @@ import { InputTextModule } from 'primeng/inputtext';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { InputMaskModule } from 'primeng/inputmask';
 import { DropdownModule } from 'primeng/dropdown';
+import { ButtonModule } from 'primeng/button';
+import {MenubarModule} from 'primeng/menubar';
+import {MenuItem} from 'primeng/api';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,6 +28,8 @@ import { DropdownModule } from 'primeng/dropdown';
     InputNumberModule,
     InputMaskModule,
     DropdownModule,
+    ButtonModule,
+    MenubarModule
   ],
   providers: [],
   bootstrap: [AppComponent],

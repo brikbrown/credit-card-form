@@ -9,3 +9,14 @@ body, html, header {
 	background-color: #fff;
 	color: #fff;
 }
+
+.p-button {
+	background: white;
+	color: grey;
+	border-color: lightgrey;
+	border-radius: 9%;
+} 
+
+button:hover {
+	background-color: lightgrey !important;
+}

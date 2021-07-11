@@ -1,41 +1,54 @@
 .wrapper {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   padding: 50px 15px;
-  background-color: #44596e;
+  background-color: #fff;
   color: black;
-  @media screen and (max-width: 700px), (max-height: 500px) {
+  @media screen and (max-width: 700px), (max-height: 600px) {
     flex-wrap: nowrap;
-    flex-direction: column;
+    flex-direction: row;
   }
+  margin-bottom: 0;
 }
 
 .credit-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
   width: 450px;
   height: 260px;
   border-radius: 4%;
   z-index: 1000;
   margin: auto;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
+  padding: 20px 15px 15px 30px;
   box-shadow: 5px 10px 18px #888888;
   background-image: url("../assets/credit-card-background.jpeg");
 }
 
 .form {
-  max-width: 570px;
+  max-width: 550px;
   margin: auto;
+  margin-bottom: 0;
   width: 100%;
   color: black;
   @media screen and (max-width: 576px) {
     margin: 0 auto;
   }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 ::ng-deep app-root .p-card {
+  margin-top: 70px;
+  margin-bottom: 20px;
   background-color: #fff;
+  box-shadow: 2px 5px 15px #cac6c6;
+  border-radius: 2%;
   color: grey;
-  height: 400px;
+  height: 350px;
   display: flex;
   align-items: flex-end;
 }
@@ -47,27 +60,22 @@
 }
 
 ::ng-deep app-root .p-field.p-col {
-  margin-right: 10px;
+//   margin-right: 14px;
   margin-bottom: 25px;
 }
 
 .cardBrand {
   width: 90px;
-  margin-left: 5px;
+  margin-left: 15px;
 }
 
 ::ng-deep app-root #cardNum.p-inputnumber-input {
   width: 350px;
 }
 
-::ng-deep app-root #code.p-inputnumber-input {
-  width: 70px;
-  margin-left: 20px;
-}
-
 ::ng-deep app-root #cvv.p-inputnumber-input {
   width: 70px;
-  margin-left: 40px;
+  margin-left: 50px;
 }
 
 label {
