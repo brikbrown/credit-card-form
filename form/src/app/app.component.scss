@@ -22,9 +22,51 @@
   z-index: 1000;
   margin: auto;
   margin-bottom: 50px;
-  padding: 20px 15px 15px 30px;
+  padding: 25px 15px 15px 30px;
   box-shadow: 5px 10px 18px #888888;
   background-image: url("../assets/credit-card-background.jpeg");
+}
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+.card-number {
+    color: rgb(94, 88, 88);
+    font-weight: 500;
+    letter-spacing: 6px;
+    font-size: 1.6rem;
+    text-shadow: 0 2px 1px;
+    margin: 10px 0 25px 0;
+    // font-family: "Orbitron", sans-serif;
+}
+
+.expiration-date {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    font-size: 0.6rem;
+    text-align: center;
+    text-shadow: 0 1px 1px;
+    color: white;
+    margin-right: 200px;
+
+    div {
+        font-size: 0.8rem;
+        color: #5e5858;
+        text-shadow: 0 2px 1px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        padding-left: 5px;
+    }
+}
+
+.card-owner {
+    display: flex;
+    color: rgb(94, 88, 88);
+    font-weight: 500;
+    letter-spacing: 4px;
+    font-size: 1rem;
+    text-shadow: 0 2px 1px;
+    margin-top: 20px;
 }
 
 .form {
