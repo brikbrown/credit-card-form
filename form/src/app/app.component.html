@@ -2,25 +2,70 @@
   <!-- <img style="width: 5rem" src="../assets/Virtual wallet logo.svg"> -->
   <div class="form">
     <p-card>
-      <div class="credit-card">
-        <h3 style="margin: 0 0 15px 0; display: flex; color: white;">VIRTUAL BANK
-          <img style="width: 2rem; margin-left: auto;" src="../assets/wireless-logo.svg">
-        </h3>
-        <img style="width: 4rem; align-self: flex-start;" src="../assets/chip.svg">
-        <h3 class="card-number">0123 4567 8910 1112</h3>
-        <h2 class="expiration-date">GOOD <br> THRU <i class="pi pi-caret-right"></i>
-          <div>02/25</div>
-        </h2>
-        <h3 class="card-owner">JOHN F. DOE
-        <img style="width: 5rem; margin-left: auto" src="../assets/visa.svg">
-        </h3>
+      <div class="flip-card">
+        <div class="credit-card">
+          <div class="card-front">
+            <h3 style="margin: 0 0 15px 0; display: flex; color: white">
+              VIRTUAL BANK
+              <img
+                style="width: 2rem; margin-left: auto"
+                src="../assets/wireless-logo.svg"
+              />
+            </h3>
+            <img
+              style="width: 4rem; align-self: flex-start"
+              src="../assets/chip.svg"
+            />
+            <h3 class="card-number">0123 4567 8910 1112</h3>
+            <h2 class="expiration-date">
+              GOOD <br />
+              THRU <i class="pi pi-caret-right"></i>
+              <div>02/25</div>
+            </h2>
+            <h3 class="card-owner">
+              {{firstName}} {{middleInitial}} {{lastName}}
+              <img
+                style="width: 5rem; margin-left: auto"
+                src="../assets/visa.svg"
+              />
+            </h3>
+          </div>
+          <div class="card-back">
+            <div class="black-strip"></div>
+            <div class="signature"> AUTHORIZED SIGNATURE - NOT VALID UNLESS SIGNED
+              <div class="signature-strip">123</div>
+            </div>
+            <div class="statement">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+              Similique maiores perferendis consequatur? Temporibus qui quia asperiores tempora dolorem quasi fugit ex dolore magni! 
+              Vitae, dolores adipisci! Soluta dignissimos architecto maxime. <br> <br>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos, odit laboriosam at necessitatibus, 
+            recusandae sed minima quo corrupti dolorum non quaerat aperiam quia temporibus 
+            voluptas fugit doloribus quidem nesciunt porro?</div>
+          </div>
+        </div>
       </div>
       <span class="p-field p-col p-float-label">
-        <input style="width: 245px; margin-right: 28px;" id="firstName" type="text" pInputText />
+        <input
+          style="width: 200px; margin-right: 18px"
+          id="firstName"
+          type="text"
+          [(ngModel)]="firstName"
+          pInputText
+        />
         <label for="firstName">First Name</label>
       </span>
       <span class="p-field p-col p-float-label">
-        <input style="width: 245px;" id="lastName" type="text" pInputText />
+        <input
+          style="width: 50px; margin-right: 18px"
+          id="middleInitial"
+          type="text"
+          [(ngModel)]="middleInitial"
+          pInputText
+        />
+        <label for="middleInitial">M.I.</label>
+      </span>
+      <span class="p-field p-col p-float-label">
+        <input style="width: 200px" id="lastName" type="text" [(ngModel)]="lastName" pInputText />
         <label for="lastName">Last Name</label>
       </span>
       <span class="p-field p-col p-float-label">

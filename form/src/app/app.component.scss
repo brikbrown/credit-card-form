@@ -12,61 +12,126 @@
   margin-bottom: 0;
 }
 
+.flip-card {
+  background-color: transparent;
+  width: 450px;
+  height: 260px;
+  z-index: 1000;
+  margin: auto;
+  margin-bottom: 50px;
+  perspective: 1000px;
+}
+
 .credit-card {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 450px;
-  height: 260px;
+  width: 100%;
   border-radius: 4%;
-  z-index: 1000;
-  margin: auto;
-  margin-bottom: 50px;
-  padding: 25px 15px 15px 30px;
+  height: 100%;
   box-shadow: 5px 10px 18px #888888;
-  background-image: url("../assets/credit-card-background.jpeg");
+  transform: 0.6s;
+  transform-style: preserve-3d;
+  transition: 1s;
+  perspective: 1000px;
 }
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+.card-front,
+.card-back {
+  position: absolute;
+  border-radius: 4%;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/credit-card-background.jpeg");
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card:hover .credit-card {
+    transform: rotateY(180deg);
+}
+
+.card-front {
+  padding: 25px 15px 15px 30px;
+}
+
+.card-back {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    transform: rotateY(180deg);
+}
 
 .card-number {
-    color: rgb(94, 88, 88);
-    font-weight: 500;
-    letter-spacing: 6px;
-    font-size: 1.6rem;
-    text-shadow: 0 2px 1px;
-    margin: 10px 0 25px 0;
-    // font-family: "Orbitron", sans-serif;
+  color: rgb(94, 88, 88);
+  font-weight: 500;
+  letter-spacing: 6px;
+  font-size: 1.6rem;
+  text-shadow: 0 2px 1px;
+  margin: 10px 0 25px 0;
+  // font-family: "Orbitron", sans-serif;
 }
 
 .expiration-date {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 0;
-    font-size: 0.6rem;
-    text-align: center;
-    text-shadow: 0 1px 1px;
-    color: white;
-    margin-right: 200px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+  font-size: 0.6rem;
+  text-align: center;
+  text-shadow: 0 1px 1px;
+  color: white;
+  margin-right: 200px;
 
-    div {
-        font-size: 0.8rem;
-        color: #5e5858;
-        text-shadow: 0 2px 1px;
-        font-weight: 500;
-        letter-spacing: 1px;
-        padding-left: 5px;
-    }
+  div {
+    font-size: 0.8rem;
+    color: #5e5858;
+    text-shadow: 0 2px 1px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding-left: 5px;
+  }
 }
 
 .card-owner {
+  display: flex;
+  color: rgb(94, 88, 88);
+  font-weight: 500;
+  letter-spacing: 4px;
+  font-size: 1rem;
+  text-shadow: 0 2px 1px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.black-strip {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    margin-bottom: 10px;  
+}
+
+.signature {
+    color: white;
+    font-size: 0.8em;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 10px;
+}
+.signature-strip {
     display: flex;
-    color: rgb(94, 88, 88);
-    font-weight: 500;
-    letter-spacing: 4px;
-    font-size: 1rem;
-    text-shadow: 0 2px 1px;
-    margin-top: 20px;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+    height: 40px;
+    color: grey;
+    background-color: white;
+}
+
+.statement {
+    margin-left: 25px;
+    margin-right: 25px;
+    color: white;
+    font-size: 0.6em;
 }
 
 .form {
@@ -102,7 +167,7 @@
 }
 
 ::ng-deep app-root .p-field.p-col {
-//   margin-right: 14px;
+  //   margin-right: 14px;
   margin-bottom: 25px;
 }
 

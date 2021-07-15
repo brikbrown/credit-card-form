@@ -21,6 +21,9 @@ export class AppComponent {
   selectedYear: Years;
   val: string;
   numInputs: number;
+  firstName: string;
+  lastName: string;
+  middleInitial: string;
 
   constructor() {
     this.months = [
